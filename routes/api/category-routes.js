@@ -19,7 +19,6 @@ router.get("/", (req, res) => {
       res.json(data);
     })
     .catch((err) => {
-      console.log(err);
       res.status(500).json(err);
     });
 });
@@ -37,13 +36,12 @@ router.get("/:id", (req, res) => {
   })
     .then((data) => {
       if (!data) {
-        res.status(404).json({ message: "There are no categories." });
+        res.status(404).json({ message: "Category not found." });
         return;
       }
       res.json(data);
     })
     .catch((err) => {
-      console.log(err);
       res.status(500).json(err);
     });
 });
@@ -55,7 +53,6 @@ router.post("/", (req, res) => {
   })
     .then((data) => res.json(data))
     .catch((err) => {
-      console.log(err);
       res.status(500).json(err);
     });
 });
@@ -75,7 +72,6 @@ router.put("/:id", (req, res) => {
       res.json(data);
     })
     .catch((err) => {
-      console.log(err);
       res.status(500).json(err);
     });
 });
@@ -95,7 +91,6 @@ router.delete("/:id", (req, res) => {
       res.json(data);
     })
     .catch((err) => {
-      console.log(err);
       res.status(500).json(err);
     });
 });
