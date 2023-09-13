@@ -65,7 +65,7 @@ To run the project in your local machine:
 3. Pull the latest from the 'main' branch
 4. Open a new terminal and type `npm install` to install the dependencies
 5. Run the following commands in this order:
-6. `mysql -u rooot -p ` (put your password)
+6. `mysql -u root -p ` (put your password)
 7. > `source db/schema.sql `
 8. > `exit`
 9. `npm run seed`
